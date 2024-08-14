@@ -6,7 +6,7 @@ import java.net.InetSocketAddress;
 
 class FWLRestAPI {
   /**
-    Creates a JSON string from a given message and a list of integers
+     Creates a JSON string from a given message and a list of integers
      @param m: The message to include in the JSON object
      @param d: The list of intergers to include in the JSON array 
    **/
@@ -26,7 +26,7 @@ class FWLRestAPI {
   }
   
   public static void main(String []args)throws IOException {
-    /* HttpServer is the main object responsible for listening on port 800 */
+    /* HttpServer is the main object responsible for listening on port 8080 */
     HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
     /* Create a context for the API or in simple terms, tells the path */
     server.createContext("/api/go", (exchange -> {

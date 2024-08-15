@@ -1,40 +1,23 @@
-package Employee;
+package com.example.SpringDummyAPI.Employee;
+
+import lombok.Getter;
 
 import java.security.SecureRandom;
 import java.time.LocalDate;
 
+@Getter
 public class Employee {
-    private String FirstName;
-    private String LastName;
-    private String email;
-    private int identification_num;
-    private LocalDate dob;
-
-    public String getFirstName() {
-        return FirstName;
-    }
-
-    public String getLastName() {
-        return LastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public int getIdentification_num() {
-        return identification_num;
-    }
-
-    public LocalDate getDob() {
-        return dob;
-    }
+    private final String FirstName;
+    private final String LastName;
+    private final String email;
+    private final int identification_num;
+    private final LocalDate dob;
 
     public Employee(String firstName, String lastName, LocalDate dob) {
         FirstName = firstName;
         LastName = lastName;
         this.email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + "xyz" + ".com";
-        this.identification_num = new SecureRandom().nextInt(500000-1000) + 1000;
+        this.identification_num = new SecureRandom().nextInt(500000 - 1000) + 1000;
         this.dob = dob;
     }
 
